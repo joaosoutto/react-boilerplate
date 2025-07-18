@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "@mui/material";
+import { useIsMobile } from "../../../../hooks/useDimensions";
 
 const MainContainer = ({
   children,
@@ -8,6 +9,7 @@ const MainContainer = ({
   children: React.ReactNode;
   style?: React.CSSProperties;
 }) => {
+  const isMobile = useIsMobile();
   return (
     <Container
       style={{
@@ -18,10 +20,10 @@ const MainContainer = ({
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "flex-start",
-        padding: 0,
         gap: "24px",
         maxHeight: "100%",
         height: "100%",
+        padding: isMobile ? 0 : "16px",
         ...style,
       }}
     >

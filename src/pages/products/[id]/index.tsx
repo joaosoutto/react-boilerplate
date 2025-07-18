@@ -7,7 +7,6 @@ import Loading from "../../../components/shared/Loading";
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const { product, isPending } = useGetProductsDetails(id as string);
-  console.log(isPending);
 
   if (isPending || !product) {
     return <Loading text="Loading product..." />;
