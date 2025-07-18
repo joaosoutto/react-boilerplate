@@ -1,7 +1,7 @@
 import React from "react";
-import MainContainer from "@/shared/components/Container/MainContainer";
-import PageInfo from "@/shared/components/Typography/PageInfo";
-import { PAGES_INFO } from "../../contants/pageInfo";
+import MainContainer from "../shared/Container/MainContainer";
+import PageInfo from "../shared/Typography/PageInfo";
+import { PAGES_INFO } from "../../../contants/pageInfo";
 
 import HomeGrid from "./HomeGrid";
 

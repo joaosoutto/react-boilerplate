@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, Typography, Box } from "@mui/material";
-import { palette } from "../../theme/palette";
+import { palette } from "../../../theme/palette";
 import Image from "next/image";
 import { IHomeCard } from "./types";
 import { useRouter } from "next/navigation";
-import { useIsMobile } from "../../hooks/useDimensions";
+import { useIsMobile } from "../../../hooks/useDimensions";
 
 const HomeCard = ({ title, description, image, path }: IHomeCard) => {
   const router = useRouter();

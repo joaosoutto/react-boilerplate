@@ -1,14 +1,14 @@
 import React from "react";
 
-import recipeImage from "../assets/images/recipes.jpg";
-import cocktailsImage from "../assets/images/cocktails.jpg";
-import productsImage from "../assets/images/products.jpg";
-import aboutImage from "../assets/images/about.png";
+import recipeImage from "../../assets/images/recipes.jpg";
+import cocktailsImage from "../../assets/images/cocktails.jpg";
+import productsImage from "../../assets/images/products.jpg";
+import aboutImage from "../../assets/images/about.png";
 
 import { Box, Typography } from "@mui/material";
-import { palette } from "../../theme/palette";
+import { palette } from "../../../theme/palette";
 import HomeCard from "./HomeCard";
-import { useIsMobile, useIsTablet } from "../../hooks/useDimensions";
+import { useIsMobile, useIsTablet } from "../../../hooks/useDimensions";
 
 const HomeGrid = () => {
   const cards = [

@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { palette } from "../../theme/palette";
+import { palette } from "../../../theme/palette";
 import AlternateEmailOutlinedIcon from "@mui/icons-material/AlternateEmailOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
-import { useIsMobile } from "../../hooks/useDimensions";
+import { useIsMobile } from "../../../hooks/useDimensions";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import LinkedinIcon from "@/assets/svgs/LinkedinIcon";
 import GithubIcon from "@/assets/svgs/GithubIcon";
 
 import Link from "next/link";
-import { CONTACTS } from "../../contants/contacts";
+import { CONTACTS } from "../../../contants/contacts";
 
 const About = () => {
   const isMobile = useIsMobile();

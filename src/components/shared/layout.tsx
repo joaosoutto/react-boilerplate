@@ -1,10 +1,10 @@
 import React from "react";
 
 import { Box } from "@mui/material";
-import { palette } from "../../theme/palette";
-import Header from "./components/navigation/Header";
-import Footer from "./components/navigation/Footer";
-import { useIsMobile } from "../../hooks/useDimensions";
+import { palette } from "../../../theme/palette";
+import Header from "./navigation/Header";
+import Footer from "./navigation/Footer";
+import { useIsMobile } from "../../../hooks/useDimensions";
 
 interface LayoutProps {
   children: React.ReactNode;

@@ -1,9 +1,9 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import MainContainer from "@/shared/components/Container/MainContainer";
-import { palette } from "../../../theme/palette";
+import MainContainer from "../../../../src/components/shared/Container/MainContainer";
+import { palette } from "../../../../src/theme/palette";
 import { useParams } from "next/navigation";
-import useGetProductsDetails from "../../../query/products/useGetProductsDetails";
+import useGetProductsDetails from "../../../../src/query/products/useGetProductsDetails";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
