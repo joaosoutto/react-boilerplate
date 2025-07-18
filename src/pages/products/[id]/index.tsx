@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "next/navigation";
-import useGetProductsDetails from "../../../query/products/useGetProductsDetails";
-import ProductDetails from "../../../src/components/Products/ProductDetails";
-import Loading from "../../../src/components/shared/Loading";
+import useGetProductsDetails from "../../../../query/products/useGetProductsDetails";
+import ProductDetails from "../../../components/Products/ProductDetails";
+import Loading from "../../../components/shared/Loading";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();

@@ -5,9 +5,9 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Head from "next/head";
 
-import Layout from "../src/components/shared/layout";
+import Layout from "../components/shared/layout";
 import { Box } from "@mui/material";
-import { palette } from "../theme/palette";
+import { palette } from "../../theme/palette";
 
 function App({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();

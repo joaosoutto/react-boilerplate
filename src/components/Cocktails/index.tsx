@@ -1,8 +1,9 @@
 import React from "react";
 import MainContainer from "../shared/Container/MainContainer";
-import { PAGES_INFO } from "../../../contants/pageInfo";
 import PageInfo from "../shared/Typography/PageInfo";
+import { PAGES_INFO } from "../../../contants/pageInfo";
 import ComingSoon from "../shared/ComingSoon";
+
 
 const Cocktails = () => {
   return (

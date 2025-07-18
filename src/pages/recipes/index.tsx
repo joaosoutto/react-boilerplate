@@ -1,4 +1,4 @@
-import Recipes from "../../src/components/Recipes";
+import Recipes from "../../components/Recipes";
 
 const RecipesPage = () => {
   return <Recipes />;

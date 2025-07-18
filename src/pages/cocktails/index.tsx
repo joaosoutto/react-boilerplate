@@ -1,4 +1,4 @@
-import Cocktails from "../../src/components/Cocktails";
+import Cocktails from "../../components/Cocktails";
 
 const CocktailsPage = () => {
   return <Cocktails />;

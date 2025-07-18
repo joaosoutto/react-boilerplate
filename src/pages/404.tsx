@@ -1,8 +1,8 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import { palette } from "../theme/palette";
+import { palette } from "../../theme/palette";
 import { NotFound as NotFoundIcon } from "@/assets/svgs/NotFound";
-import MainContainer from "../src/components/shared/Container/MainContainer";
+import MainContainer from "../components/shared/Container/MainContainer";
 
 const NotFoundPage = () => {
   return (
