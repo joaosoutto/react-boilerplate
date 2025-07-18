@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "@mui/material";
-import { palette } from "../../../../theme/palette";
 
 const MainContainer = ({
   children,
@@ -11,17 +10,18 @@ const MainContainer = ({
 }) => {
   return (
     <Container
-      maxWidth="lg"
-      sx={{
-        height: "100vh",
+      style={{
+        flex: 1,
+        width: "100%",
         minWidth: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: palette.background.container,
-        border: `1px solid ${palette.divider}`,
-        flex: 1,
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+        padding: 0,
+        gap: "24px",
+        maxHeight: "100%",
+        height: "100%",
         ...style,
       }}
     >

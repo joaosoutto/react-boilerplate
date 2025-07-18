@@ -35,7 +35,7 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "repeat(5, 1fr)",
     gap: "12px",
-    overflow: "auto",
+    // overflow: "auto",
     paddingRight: "6px",
   },
 };

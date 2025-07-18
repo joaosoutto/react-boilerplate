@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Box } from "@mui/material";
+import { palette } from "../../theme/palette";
 import Header from "./components/navigation/Header";
+import Footer from "./components/navigation/Footer";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,9 +19,10 @@ const Layout: React.FC<LayoutProps> = (props) => {
         display: "flex",
         flexDirection: "column",
         maxHeight: "100vh",
-        // overflow: "hidden",
         height: "100vh",
         width: "100%",
+        backgroundColor: palette.branded.darkGray,
+        overflow: "hidden",
       }}
     >
       {/* Header */}
@@ -27,21 +30,20 @@ const Layout: React.FC<LayoutProps> = (props) => {
 
       {/* Main Content */}
       <Box
-        component="main"
         sx={{
           flex: 1,
           display: "flex",
-          flexDirection: "column",
+          backgroundColor: palette.branded.lightBg,
+          margin: 2,
           padding: 2,
-          maxHeight: "100%",
-          maxWidth: "100%",
           overflow: "auto",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
         {props.children}
       </Box>
+
+      {/* Footer */}
+      <Footer />
     </Box>
   );
 };
