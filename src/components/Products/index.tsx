@@ -1,5 +1,5 @@
 import React from "react";
-// import ProductsGrid from "./ProductsGrid";
+import ProductsGrid from "./ProductsGrid";
 import { PAGES_INFO } from "../../../contants/pageInfo";
 import PageInfo from "../shared/Typography/PageInfo";
 import MainContainer from "../shared/Container/MainContainer";
@@ -11,7 +11,7 @@ const Products = () => {
         title={PAGES_INFO.products.title}
         description={PAGES_INFO.products.description}
       />
-      {/* <ProductsGrid /> */}
+      <ProductsGrid />
     </MainContainer>
   );
 };

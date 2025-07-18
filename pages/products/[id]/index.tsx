@@ -1,35 +1,19 @@
 import React from "react";
-import { Typography } from "@mui/material";
-import MainContainer from "../../../../src/components/shared/Container/MainContainer";
-import { palette } from "../../../../src/theme/palette";
 import { useParams } from "next/navigation";
-import useGetProductsDetails from "../../../../src/query/products/useGetProductsDetails";
+import useGetProductsDetails from "../../../query/products/useGetProductsDetails";
+import ProductDetails from "../../../src/components/Products/ProductDetails";
+import Loading from "../../../src/components/shared/Loading";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
-  const { product } = useGetProductsDetails(id as string);
+  const { product, isPending } = useGetProductsDetails(id as string);
+  console.log(isPending);
 
-  console.log(product);
-  return (
-    <MainContainer
-      style={{
-        gap: "20px",
-        overflow: "auto",
-        padding: "20px",
-      }}
-    >
-      <Typography
-        variant="h3"
-        sx={{
-          fontWeight: 700,
-          color: palette.gray,
-          mb: 2,
-        }}
-      >
-        Products
-      </Typography>
-    </MainContainer>
-  );
+  if (isPending || !product) {
+    return <Loading text="Loading product..." />;
+  }
+
+  return <ProductDetails product={product} />;
 };
 
 export default ProductDetailsPage;

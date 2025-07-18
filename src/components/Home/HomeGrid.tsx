@@ -5,10 +5,10 @@ import cocktailsImage from "../../assets/images/cocktails.jpg";
 import productsImage from "../../assets/images/products.jpg";
 import aboutImage from "../../assets/images/about.png";
 
-import { Box, Typography } from "@mui/material";
-import { palette } from "../../../theme/palette";
 import HomeCard from "./HomeCard";
-import { useIsMobile, useIsTablet } from "../../../hooks/useDimensions";
+import GridContainer from "../shared/Container/GridContainer";
+import PageSubtitle from "../shared/Typography/PageSubtitle";
+import ContentContainer from "../shared/Container/ContentContainer";
 
 const HomeGrid = () => {
   const cards = [
@@ -41,50 +41,15 @@ const HomeGrid = () => {
     },
   ];
 
-  const isMobile = useIsMobile();
-  const isSmallScreen = useIsTablet();
   return (
-    <Box
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "24px",
-        flex: 1,
-        width: isMobile || isSmallScreen ? "100%" : "90%",
-        margin: "0 auto",
-        paddingBottom: "24px",
-        justifyContent: "center",
-      }}
-    >
-      <Typography
-        sx={{
-          fontSize: "18px",
-          fontWeight: 600,
-          color: palette.branded.darkGray,
-          borderBottom: `2px solid ${palette.branded.secondary}`,
-          paddingLeft: 1,
-        }}
-      >
-        Discover Our Services
-      </Typography>
-      <Box
-        style={{
-          gap: isMobile ? "12px" : "24px",
-          width: "100%",
-          justifySelf: "center",
-          alignSelf: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          display: "grid",
-          gridTemplateColumns:
-            isMobile || isSmallScreen ? "repeat(1, 1fr)" : "repeat(2, 1fr)",
-        }}
-      >
+    <ContentContainer>
+      <PageSubtitle title="Discover Our Services" />
+      <GridContainer>
         {cards.map((card) => (
           <HomeCard key={card.title} {...card} />
         ))}
-      </Box>
-    </Box>
+      </GridContainer>
+    </ContentContainer>
   );
 };
 

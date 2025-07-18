@@ -5,11 +5,12 @@ import AlternateEmailOutlinedIcon from "@mui/icons-material/AlternateEmailOutlin
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import { useIsMobile } from "../../../hooks/useDimensions";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
-import LinkedinIcon from "@/assets/svgs/LinkedinIcon";
-import GithubIcon from "@/assets/svgs/GithubIcon";
+
 
 import Link from "next/link";
 import { CONTACTS } from "../../../contants/contacts";
+import LinkedinIcon from "./LinkedinIcon";
+import GithubIcon from "./GithubIcon";
 
 const About = () => {
   const isMobile = useIsMobile();

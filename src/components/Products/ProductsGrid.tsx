@@ -1,41 +1,36 @@
-// import React from "react";
-// import {
-//   Box,
-// } from "@mui/material";
-// import { IProduct } from "./types";
-// import ProductCard from "./ProductCard";
-// import ProductSkeleton from "./ProductSkeleton";
+import React from "react";
+import { IProduct } from "./types";
+import ProductCard from "./ProductCard";
+import useGetProducts from "../../../query/products/useGetProducts";
+import GridContainer from "../shared/Container/GridContainer";
+import PageSubtitle from "../shared/Typography/PageSubtitle";
+import ContentContainer from "../shared/Container/ContentContainer";
+import { Box, CircularProgress, Typography } from "@mui/material";
+import { palette } from "../../../theme/palette";
+import Loading from "../shared/Loading";
 
-// const ProductsGrid = () => {
-//   const { products, isPending } = useGetProducts();
+const ProductsGrid = () => {
+  const { products, isPending } = useGetProducts();
 
-//   if (isPending) {
-//     return (
-//       <Box style={styles.container}>
-//         {Array.from({ length: 15 }).map((_, index) => (
-//           <ProductSkeleton key={index} />
-//         ))}
-//       </Box>
-//     );
-//   }
+  if (isPending) {
+    return (
+      <ContentContainer>
+        <PageSubtitle title="Discover Our Products" />
+        <Loading text="Fetching products..." />
+      </ContentContainer>
+    );
+  }
 
-//   return (
-//     <Box style={styles.container}>
-//       {products?.map((product: IProduct) => (
-//         <ProductCard key={product.id} product={product} />
-//       ))}
-//     </Box>
-//   );
-// };
+  return (
+    <ContentContainer>
+      <PageSubtitle title="Discover Our Products" />
+      <GridContainer columns={4}>
+        {products?.map((product: IProduct) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </GridContainer>
+    </ContentContainer>
+  );
+};
 
-// const styles = {
-//   container: {
-//     width: "80%",
-//     display: "grid",
-//     gridTemplateColumns: "repeat(5, 1fr)",
-//     gap: "12px",
-//     paddingRight: "6px",
-//   },
-// };
-
-// export default ProductsGrid;
+export default ProductsGrid;

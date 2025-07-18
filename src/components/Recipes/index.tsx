@@ -1,8 +1,8 @@
 import React from "react";
-import MainContainer from "@/components/shared/components/Container/MainContainer";
+import MainContainer from "../shared/Container/MainContainer";
 import { PAGES_INFO } from "../../../contants/pageInfo";
-import PageInfo from "@/components/shared/components/Typography/PageInfo";
-import ComingSoon from "@/components/shared/components/ComingSoon";
+import PageInfo from "../shared/Typography/PageInfo";
+import ComingSoon from "../shared/ComingSoon";
 
 const Recipes = () => {
   return (

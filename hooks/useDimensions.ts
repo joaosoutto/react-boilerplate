@@ -5,7 +5,7 @@ export const useIsMobile = () => {
 };
 
 export const useIsTablet = () => {
-  return useMediaQuery("(max-width: 1024px)");
+  return useMediaQuery("(max-width: 1130px)");
 };
 
 export const useIsDesktop = () => {

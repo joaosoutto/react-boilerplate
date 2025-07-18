@@ -1,5 +1,5 @@
 import { Box, Skeleton, BoxProps } from "@mui/material";
-import { palette } from "../../theme/palette";
+import { palette } from "../../../theme/palette";
 
 interface ProductSkeletonProps extends Omit<BoxProps, 'sx'> {
   height?: number;

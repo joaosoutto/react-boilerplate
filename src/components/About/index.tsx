@@ -1,7 +1,7 @@
 import React from "react";
-import MainContainer from "@/components/shared/components/Container/MainContainer";
+import MainContainer from "../shared/Container/MainContainer";
 import { PAGES_INFO } from "../../../contants/pageInfo";
-import PageInfo from "@/components/shared/components/Typography/PageInfo";
+import PageInfo from "../shared/Typography/PageInfo";
 
 import Contacts from "./Contacts";
 
