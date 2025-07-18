@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { palette } from "../../../../../theme/palette";
+import { useIsMobile } from "../../../../../hooks/useDimensions";
 
 const Footer = () => {
-  const isMobile = useMediaQuery("(max-width: 750px)");
+  const isMobile = useIsMobile();
 
   if (isMobile) {
     return null;

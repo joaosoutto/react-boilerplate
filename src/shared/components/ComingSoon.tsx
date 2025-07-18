@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Box, Typography } from "@mui/material";
-import { useMediaQuery } from "@mui/material";
 import { palette } from "../../../theme/palette";
 import HandymanRoundedIcon from "@mui/icons-material/HandymanRounded";
+import { useIsMobile, useIsTablet } from "../../../hooks/useDimensions";
 
 const ComingSoon = () => {
-  const isMobile = useMediaQuery("(max-width: 750px)");
-  const isSmallScreen = useMediaQuery("(max-width: 1246px)");
+  const isMobile = useIsMobile();
+  const isSmallScreen = useIsTablet();
   return (
     <Box
       style={{
@@ -22,13 +22,13 @@ const ComingSoon = () => {
     >
       <Typography
         sx={{
-          fontSize: "24px",
+          fontSize: isMobile ? "18px" : "24px",
           fontWeight: 600,
           color: palette.branded.darkGray,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: "12px",
+          gap: isMobile ? "8px" : "12px",
           animation: "spin 1.5s linear infinite",
           "@keyframes spin": {
             "0%": {
@@ -45,7 +45,7 @@ const ComingSoon = () => {
       >
         <HandymanRoundedIcon
           sx={{
-            fontSize: "36px",
+            fontSize: isMobile ? "24px" : "36px",
             color: palette.branded.primary,
           }}
         />

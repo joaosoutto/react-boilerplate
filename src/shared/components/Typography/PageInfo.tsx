@@ -1,6 +1,7 @@
 import React from "react";
-import { Typography, Box, useMediaQuery } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { palette } from "../../../../theme/palette";
+import { useIsMobile } from "../../../../hooks/useDimensions";
 
 const PageInfo = ({
   title,
@@ -9,7 +10,7 @@ const PageInfo = ({
   title: string;
   description?: string;
 }) => {
-  const isMobile = useMediaQuery("(max-width: 750px)");
+  const isMobile = useIsMobile();
   return (
     <Box
       style={{
@@ -26,8 +27,10 @@ const PageInfo = ({
           width: "100%",
           color: palette.branded.darkGray,
           fontSize: isMobile ? "32px" : "40px",
-          borderLeft: `${isMobile ? 4 : 8}px solid ${palette.branded.primary}`,
-          paddingLeft: isMobile ? 1 : 2,
+          borderLeft: `8px solid ${palette.branded.primary}`,
+          borderTopLeftRadius: "12px",
+          borderBottomLeftRadius: "12px",
+          paddingLeft: 1,
         }}
       >
         {title}

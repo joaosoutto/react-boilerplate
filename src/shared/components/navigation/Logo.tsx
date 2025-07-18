@@ -1,12 +1,13 @@
 import React from "react";
-import { Typography, useMediaQuery } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import CodeIcon from "@mui/icons-material/Code";
 import { palette } from "../../../../theme/palette";
+import { useIsMobile } from "../../../../hooks/useDimensions";
 
 const Logo = ({ color }: { color?: string }) => {
   const router = useRouter();
-  const isMobile = useMediaQuery("(max-width: 750px)");
+  const isMobile = useIsMobile();
 
   const handleNavigation = (path: string) => {
     router.push(path);

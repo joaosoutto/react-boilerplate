@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import { palette } from "../../theme/palette";
 import Header from "./components/navigation/Header";
 import Footer from "./components/navigation/Footer";
+import { useIsMobile } from "../../hooks/useDimensions";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,6 +14,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = (props) => {
+  const isMobile = useIsMobile();
   return (
     <Box
       sx={{
@@ -34,8 +36,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
           flex: 1,
           display: "flex",
           backgroundColor: palette.branded.lightBg,
-          margin: 2,
-          padding: 2,
+          padding: isMobile ? 2 : 4,
           overflow: "auto",
         }}
       >

@@ -103,7 +103,7 @@ const MobileNavigation: React.FC<{
               key={route.path}
               onClick={() => handleNavigation(route.path)}
               sx={{
-                color: palette.branded.darkGray,
+                color: palette.branded.primary,
                 fontSize: "16px",
                 fontWeight: 600,
                 textTransform: "none",

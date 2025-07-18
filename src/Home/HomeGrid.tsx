@@ -8,7 +8,7 @@ import aboutImage from "../assets/images/about.png";
 import { Box, Typography } from "@mui/material";
 import { palette } from "../../theme/palette";
 import HomeCard from "./HomeCard";
-import { useMediaQuery } from "@mui/material";
+import { useIsMobile, useIsTablet } from "../../hooks/useDimensions";
 
 const HomeGrid = () => {
   const cards = [
@@ -41,8 +41,8 @@ const HomeGrid = () => {
     },
   ];
 
-  const isMobile = useMediaQuery("(max-width: 750px)");
-  const isSmallScreen = useMediaQuery("(max-width: 1246px)");
+  const isMobile = useIsMobile();
+  const isSmallScreen = useIsTablet();
   return (
     <Box
       style={{
@@ -60,7 +60,9 @@ const HomeGrid = () => {
         sx={{
           fontSize: "18px",
           fontWeight: 600,
-          color: palette.branded.primary,
+          color: palette.branded.darkGray,
+          borderBottom: `2px solid ${palette.branded.secondary}`,
+          paddingLeft: 1,
         }}
       >
         Discover Our Services
